@@ -1,0 +1,60 @@
+/*************************************************************************
+  > File Name: 4.c
+  > Author: narutolby
+  > Mail:willianlby@yahoo.cn
+  > Created Time: 2013年04月13日 星期六 15时40分05秒
+ ************************************************************************/
+
+#include<stdio.h>
+void getNext(char *p,int next[])
+{
+    int len,i,j;
+    len=strlen(p);
+    next[0]=0;
+    for(i=1;i<len;i++)
+    {
+        j=next[i-1];
+        while((p[i-1]!=p[j-1])&&(j!=0))
+        {
+            j=next[j-1];
+//            printf("j= %d\n",j);
+        }
+        next[i]=j+1;
+    }
+}
+void kmp(char *t,char *p,int next[])
+{
+    int lent,lenp,i,j;
+    lent=strlen(t);
+    lenp=strlen(p);
+    i=0;
+    j=0;
+    while(i<(lent))
+    {
+        if((j==-1)||(t[i]==p[j]))
+        {
+            i++;
+            j++;
+
+//            printf("i=%d,j=%d\n",i,j);
+        }
+        else
+        {
+            
+//            printf("in else i=%d,j=%d\n",i,j);
+            j=next[j]-1;
+        }
+        if(j==(lenp))
+        {
+            printf("match at place %d\n",i-lenp);
+        }
+    }
+}
+int main(){
+    
+
+
+
+
+	return 0;
+}

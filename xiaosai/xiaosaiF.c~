@@ -1,0 +1,95 @@
+#include<stdio.h>
+int main (){
+    int N=0;
+    int roads=0;
+    int length=0;
+    int i, j, k;
+    int a[25001]={0};
+    int b[25001]={0};
+    int flag=0;
+    int maxLength = 0;
+    int minLength = 5000;
+    int tmp;
+    int mintmp;
+    while(scanf("%d",&N)!= EOF){
+       
+       for(i = 1; i<= N-1;i++){
+           scanf("%d",&roads);
+           if(i==1){
+              for(j=1;j<=roads;j++){
+                 scanf("%d",&length);
+                 if(length > maxLength)
+                   maxLength=length;
+                 if(length < minLength)
+                   minLength=length;
+                 a[length]++;     
+              } 
+              flag=0; 
+              
+           }
+           else if(i%2 == 0){
+                mintmp= minLength + 5000;
+                for(j=1;j<=roads;j++){
+                   scanf("%d",&length);
+                   tmp = maxLength;
+                   
+                   for(k=minLength;k<=maxLength;k++)
+                     if(a[k]!= 0){
+                      b[k+length]= b[k+length]+a[k];
+                      if(k+length > tmp)
+                        tmp = k+length;
+                      if(k+length < mintmp)
+                        mintmp = k+length;
+                      if(j==roads)
+                      a[k]=0;   }  
+                   maxLength = tmp;
+                   
+                }
+                minLength = mintmp;
+              
+                flag=1;
+           }
+           else{
+                mintmp=minLength+5000;
+                for(j=1;j<=roads;j++){
+                   scanf("%d",&length);
+                   tmp = maxLength;
+                   
+                   for(k=minLength;k<=maxLength;k++)
+                     if(b[k]!= 0)
+                      { a[k+length]=a[k+length]+b[k];
+                        if(k+length > tmp)
+                           tmp = k+length;
+                        if(k+length < mintmp)
+                           mintmp = k+length;
+                        if(j==roads)
+                          b[k]=0;
+                      }
+                  maxLength = tmp;
+                      
+                }
+                minLength = mintmp; 
+                
+                flag=0;
+           }
+       }
+       if(flag==0){
+          for(i=minLength;i<=maxLength;i++)
+             if(a[i]!= 0)
+                 {printf("%d %d\n",i,a[i]);
+                 a[i]=0;}  
+       }
+       else{
+            for(i=minLength;i<=maxLength;i++)
+                 if(b[i]!= 0)
+                  { printf("%d %d\n",i,b[i]);  
+                    b[i]=0;
+                    flag=0;}
+       }
+       tmp = maxLength = 0; 
+       mintmp = minLength=5000;  
+    }
+    return 0;
+} 
+
+

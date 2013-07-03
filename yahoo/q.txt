@@ -1,0 +1,477 @@
+
+[ willianlby@yahoo.cn ]
+Progress
+
+Question 1
+Question 2
+Question 3
+Question 4
+Question 5
+Yahoo! Hack Beijing Challenge
+Back to Question List Time Remaining: 00:00:31
+Question 1 / 5 (Problem A)
+Given a rational number expressed as A/B where A and B are integers, find the position of Mth occurrence of digit D (0-9) after decimal point. For example 3/7 = 0.4285714285... (A=3, B=7), so the 2nd (M=2) 4 (D=4) is the 7th digit after decimal point.
+
+Limits:
+
+0 < A, B, M < 2 x 108
+
+0 <= D <= 9
+
+Input:
+
+The first line of the input gives the number of test cases, N. N test cases follow. Each test case consists of one line containing 4 numbers, A, B, M and D separated by spaces.
+
+Output:
+
+Each line contains the position (starting from 1) of the specified digit D. Output “0” if it is impossible to find the digit.
+
+Sample:
+
+Input	Outut
+7
+3 7 1 1
+3 7 2 2
+3 7 3 6
+5 11 2 3
+5 11 3 7
+20 193 20 6
+200000 19893 50 8
+
+6
+8
+0
+0
+0
+191
+470
+Test case: (Please write a program to read the test case input data below from STDIN and print the output to STDOUT in the format as described above)
+
+30
+3 7 1 1
+3 7 2 2
+3 7 3 6
+5 11 2 3
+5 11 3 7
+20 193 20 6
+200000 19893 50 8
+2 18 999 1
+121 10000 2 1
+121 10000 3 1
+121 10000 1 5
+1 1 1 1
+12 21 21 2
+123 321 321 3
+1234 4321 4321 4
+12345 54321 54321 5
+123456 654321 654321 6
+1234567 7654321 7654321 7
+12345678 87654321 87654321 8
+21 12 21 2
+321 123 321 3
+4321 1234 4321 4
+54321 12345 54321 5
+654321 123456 654321 6
+7654321 1234567 7654321 7
+87654321 12345678 87654321 8
+24691111 199998000 1 3
+24691111 199998000 100 5
+24691111 199998000 5 3
+24691111 199998000 99999999 9 
+
+ 
+
+  Download sample testcases as zip ['Compile & Test' will run your code against these testcases]
+Pick your language C  C++  Java  PHP  Python  C#  Javascript  Ruby  Perl  Haskell  Scala  Clojure  Go
+
+2
+#include <stdio.h>
+3
+int main() {
+4
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+5
+    return 0;
+6
+}
+ 
+ Keyboard Shortcuts Available
+Compile & Test
+    Powered by
+
+
+
+[ willianlby@yahoo.cn ]
+Progress
+
+Question 1
+Question 2
+Question 3
+Question 4
+Question 5
+Yahoo! Hack Beijing Challenge
+Back to Question List Time Remaining: 00:00:08
+Question 2 / 5
+Given a N*N grid where N is an even number and 6 points A, B, C, D, E and F. The coordinates of each point are (xa, ya), (xb, yb), ..., (xf, yf). Define S to be the following.
+
+S = 2 * (SABC + SDEF) where SABC and SDEF are the area of the triangle ABC and DEF.
+
+Below is an example of 4*4 grid. In this case S = 2 * SABC + 2 * SDEF = 6 + 8 = 14.
+
+
+
+Now your task is, given an arbitrary S, find one possible solution of the 6 points that meets the above requirement.
+
+Limits:
+
+xa, ya, xb, yb, ..., xf, yf are integers between 0 and N.
+N and S are natural numbers.
+0 < N, S < 1010
+Input:
+
+The first line of the input gives the number of test cases, N. N test cases follow. Each test case consists of one line containing 2 numbers, N and S separated by one space.
+
+Output:
+
+The coordinates of A, B, C, D, E and F. If no possible solution can be found, output the word “impossible” (quotes for clarity).
+
+Sample:
+
+Input	Output
+3
+4 14
+4 36
+6 21
+
+0 0 1 4 2 1 0 0 1 4 2 1
+impossible
+0 0 1 6 2 2 0 0 1 6 2 1
+Test case: (Please write a program to read the test case input data below from STDIN and print the output to STDOUT in the format as described above)
+
+13
+4 14
+4 36
+100 9999
+100 19999
+100 20000
+100 20001
+12 21
+123 321
+1234 4321
+12345 54321
+123456 654321
+1234567 7654321
+12345678 87654321
+
+Scoring: The sample test-case is not worth any points. Your code should be able to clear the hidden test-cases which we'll run after the contest. Depending on how many test-cases your code passes, you'll get a score.
+
+  Download sample testcases as zip ['Compile & Test' will run your code against these testcases]
+Pick your language C  C++  Java  PHP  Python  C#  Javascript  Ruby  Perl  Haskell  Scala  Clojure  Go
+
+2
+#include <stdio.h>
+3
+int main() {
+4
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+5
+    return 0;
+6
+}
+ 
+ Keyboard Shortcuts Available
+Compile & Test
+    Powered by
+
+
+
+
+[ willianlby@yahoo.cn ]
+Progress
+
+Question 1
+Question 2
+Question 3
+Question 4
+Question 5
+Yahoo! Hack Beijing Challenge
+Back to Question List Time Remaining: 00:00:00
+Question 3 / 5 (Problem C)
+You are given N line segments, with each line segment depicted by its starting and ending points, calculate the longest continuous line segment with the given line segments set.
+
+Limits:
+
+1 < N < 100
+​The starting and ending point integer ranges from 0 to 10,000
+Input:
+
+The first line of the input is the number of line segments N, each following line has two integers depicting the starting and ending points, respectively.
+
+Output:
+
+Length of longest consecutive line segment.
+
+Sample:
+
+Input	Output
+5
+0  1
+0  5
+7  10
+8  12
+1  3
+
+5
+With the given input set, the longest continuous line segment starts at 0 and ends at 5 (or starts at 7 and ends at 12), gives the length 5.
+
+Test case: (Please write a program to read the test case input data below from STDIN and print the output to STDOUT in the format as described above)
+
+  Download sample testcases as zip ['Compile & Test' will run your code against these testcases]
+Pick your language C  C++  Java  PHP  Python  C#  Javascript  Ruby  Perl  Haskell  Scala  Clojure  Go
+
+2
+#include<stdio.h>
+3
+int main(){
+4
+    int max=0,N,a,b,array[10000]={0};
+5
+    scanf("%d",&N);
+6
+    while(N--){
+7
+        scanf("%d%d",&a,&b);
+8
+        int i=a;
+9
+        for(i=a;i<=b;i++){
+10
+            array[i]++;
+11
+        }
+12
+    }
+13
+    int j=0,temp=0;
+14
+    for(j=0;j<10000;j++){
+15
+       if(array[j]==0){
+16
+           if(max<temp){
+17
+             max=temp;
+18
+           }
+19
+           temp=0;
+20
+       }else{
+21
+         temp++;
+22
+       }
+23
+    }
+24
+    if(max<temp){
+25
+      max=temp;
+26
+    }
+27
+    printf("%d\n",max-1);
+28
+ 
+29
+    return 0;
+30
+}
+ 
+ Keyboard Shortcuts Available
+Compile & Test
+    Powered by
+
+
+
+
+[ willianlby@yahoo.cn ]
+Progress
+
+Question 1
+Question 2
+Question 3
+Question 4
+Question 5
+Yahoo! Hack Beijing Challenge
+Back to Question List Time Remaining: 00:00:00
+Question 4 / 5
+Given a source M*N matrix A and a target M*N matrix B, elements in each matrix are integers of range 0 ~ (M*N-1), each integer only appears once in the same matrix. Please find the steps to change matrix A to B. The rules are:
+
+Only “0” can switch with neighbor element. A neighbor element is the one that is to the left/right/top/bottom of “0”.
+
+Certain values in matrix A cannot be changed, they are designated in array C.
+
+Input:
+
+First line is M, N separated by space, followed by M lines of elements in matrix A, then followed by M lines of elements in matrix B, then followed by a line of elements in array C. Values in each line are separated by spaces.
+
+Output:
+
+One line with X steps, separated by space. Each step is the value of element that would switch with “0”.
+
+Sample:
+
+ 
+
+For A= [	0 1 2
+3 4 5
+6 7 8	], B= [	3 1 2 
+6 4 5
+0 7 8	], C=[1]
+Input	Output
+3 3
+0 1 2
+3 4 5
+6 7 8
+3 1 2
+6 4 5
+0 7 8
+1
+
+3 6
+Test case: (Please write a program to read the test case input data below from STDIN and print the output to STDOUT in the format as described above)
+
+3 3
+0 1 2
+3 4 5
+6 7 8
+3 1 2
+6 4 5
+0 7 8
+1
+
+Scoring: The sample test-case is not worth any points. Your code should be able to clear the hidden test-cases which we'll run after the contest. Depending on how many test-cases your code passes, you'll get a score.
+
+  Download sample testcases as zip ['Compile & Test' will run your code against these testcases]
+Pick your language C  C++  Java  PHP  Python  C#  Javascript  Ruby  Perl  Haskell  Scala  Clojure  Go
+
+2
+#include <stdio.h>
+3
+int main() {
+4
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+5
+    return 0;
+6
+}
+ 
+ Keyboard Shortcuts Available
+Compile & Test
+    Powered by
+
+
+
+
+[ willianlby@yahoo.cn ]
+Progress
+
+Question 1
+Question 2
+Question 3
+Question 4
+Question 5
+Yahoo! Hack Beijing Challenge
+Back to Question List Time Remaining: 00:00:00
+Question 5 / 5
+A palindrome is a word, phrase, number, or sentence, whose meaning may be interpreted the same way in either forward or reverse direction.
+
+Some well-known English palindromes are, "Able was I ere I saw Elba", "A man, a plan, a canal Panama!",  "Madam, I'm Adam" or "Madam in Eden, I'm Adam", "Doc, note: I dissent. A fast never prevents a fatness. I diet on cod" and "Never odd or even".
+
+You are given a list of words, please use those words to find out the longest palindrome, with as many characters as you can.
+
+Notes:
+
+The sentence need not to be logically meaningful nor grammatically correct, it can be any combination of the words;
+
+Palindrom's are case insensitive, e.g. letter 'E' is considered same as letter 'e';
+
+You can only use the words in the given list;
+
+Each word can be used at most once;
+
+Word list may contain 1~100000 words.
+
+Input:
+
+First line is the number of the words in the list, then followed by the list of words, with one word in each line.
+
+Output:
+
+Just output any of the longest sentence you found. If the given list can’t construct a valid palindrome sentence, just output “impossible”.
+
+Sample:
+
+Input	 Output
+5
+ate
+Lisa
+Bonet
+basil
+no	
+Lisa Bonet ate no basil
+
+ 
+
+Sample 2:
+
+Input	 Output
+8
+cat
+in
+Oozy
+zoo
+park
+a
+sanitary
+rat	
+oozy rat in a sanitary zoo
+
+Sample 3:
+
+Input	 Output
+5
+too
+hard
+to
+get
+​one
+
+impossible
+ 
+
+Test cases: (Please write a program to read the test case data from STDIN and print the output to STDOUT in the format described above).
+
+ 
+
+ 
+
+  Download sample testcases as zip ['Compile & Test' will run your code against these testcases]
+Pick your language C  C++  Java  PHP  Python  C#  Ruby  Perl  Haskell  Scala  Clojure  Go  Javascript
+
+2
+#include <stdio.h>
+3
+int main() {
+4
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+5
+    return 0;
+6
+}
+ 
+ Keyboard Shortcuts Available
+Compile & Test
+    Powered by
+
